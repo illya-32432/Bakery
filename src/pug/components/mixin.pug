@@ -1,0 +1,176 @@
+-
+    let cardsInfo = {
+        veloIcon: {
+            img: "img/velo-icon.png",
+            alt: "velo-icon",
+            topTitle: "Тур на велосипедах",
+            price: 335,
+            currency: "грн*",
+            description: [
+                "Подорожуючи  на велосипеді,ви",
+                "поринете в атмосферу мальовничих гір", 
+                "чарівнмх краєвидів та шалених пригод.",
+            ],
+            praporec: false,
+        },
+        circle: {
+            img: "img/circle.png",
+            alt: "circle",
+            topTitle: "Екскурсія на острів",
+            price: 500,
+            currency: "грн*",
+            description: [
+                "Подорож на острів занурить Вас у незабутнні пригоди.",
+                "Неймовірна краса  у будь-яку пору року.",
+            ],
+            praporec: true,
+        },
+        think: {
+            img: "img/think.png",
+            alt: "think-icon",
+            topTitle: "Особливе замовлення",
+            price: 250,
+            currency: "грн*",
+            description: [
+                "Обираючи цю подорож, Ви самостійно",
+                "робите її незабутнбою та не схожою на будь-які інші.",
+            ],
+            praporec: true,
+        }
+    }
+
+mixin card (oneCard)
+    figure.card
+        figcaption.fig
+            if oneCard.praporec
+                .best-off
+            img(src=oneCard.img, alt=oneCard.alt)
+            p.topTitlel #{oneCard.topTitle}
+            p
+                b.price #{oneCard.price}
+                b.currency #{oneCard.currency}
+                p.styu #{oneCard.description}
+
+
+-
+    let secondcardsInfo = {
+        romantick: { 
+            image: "img/romantic-trip.png",
+            imageSc: "img/orange-znack.jpg",
+            altt: "znak",
+            alt: "romantick",
+            topTitleSec: "Романтична подорож на 2",
+            zamow: "замовити",
+            bisicle: false,
+            description: [
+                "Подорож у найромантичніші",
+                "куточки світу, занурить вас",
+                "у дивовижні пейзажі природи.",
+            ],
+            price: 2599,
+            currency: "грн.",
+        },
+        bikeTrip: { 
+            image: "img/bike-trip.png",
+            imageSc: "img/orange-znack.jpg",
+            altt: "znak",
+            alt: "bikeTrip",
+            topTitleSec: "Велотур",
+            zamow: "замовити",
+            bisicle: true,
+            description: [
+                "Бажаєте прокататись з вітерцем",
+                "та ще й з критим краєвидом довкола?",
+                "Тоді швидше замовляй велотур!",
+            ],
+            price: 555,
+            currency: "грн."
+        },
+        island: {
+            image: "img/to-islands.png",
+            imageSc: "img/orange-znack.jpg",
+            altt: "znak",
+            alt: "island-icon",
+            topTitleSec: "На острови!",
+            price: 1559,
+            bisicle: false,
+            currency: "грн.",
+            zamow: "замовити",
+            description: [
+                "Обираючи цю подорож, Ви самостійно",
+                "робите її незабутнбою та не схожою на будь-які інші."
+            ]
+        },
+        serfing: {
+            image: "img/surfing.png",
+            imageSc: "img/orange-znack.jpg",
+            altt: "znak",
+            alt: "serfing-icon",
+            topTitleSec: "Катання на сьорфінгу",
+            price: 999,
+            currency: "грн.",
+            bisicle: false,
+            zamow: "замовити",
+            description: [
+                "Обираючи цю подорож, Ви самостійно",
+                "робите її незабутнбою та не схожою на будь-які інші."
+            ]
+        }
+    }
+mixin cards (oneCardSecond)
+    figure.card-secondary
+        figcaption.fig
+            .best-offer
+            if oneCardSecond.bisicle 
+                .bicycle
+            img(id="dontP")(src=oneCardSecond.image, alt=oneCardSecond.alt)
+            p.topTitleSec #{oneCardSecond.topTitleSec}
+            p
+                p.styu #{oneCardSecond.description}
+                .flexX
+                    .ssr
+                        b.price #{oneCardSecond.price}
+                        b.currency #{oneCardSecond.currency}
+                    .flex
+                        p.yello-Style(id="yello") #{oneCardSecond.zamow}
+
+-
+    let thirdCardsInfo = {
+        grafik: {
+            img: "img/file.svg",
+            alt: "file",
+            topTitleThird: "Графік роботи готелів.xls",
+            size: "Розмір файла: 10Mb",
+            mainThirdText: [
+                "Розклад роботи усіх наших готелів,",
+                "можете знайти за цим посиланням.",
+                "Та додатково завантажити їх фото.",
+            ],
+            download: "скачати"
+        },
+        information: {
+            img: "img/file.svg",
+            alt: "file",
+            topTitleThird: "Інформація про харчування.xls",
+            size: "Розмір файла: 10Mb",
+            mainThirdText: [
+                "У будь-якому нашому турі включені",
+                "сніданки у вартість. Якщо ж",
+                "бажаєте замовити додотково, то",
+                "ознайомтесь з умовами.",
+            ],
+            download: "скачати"
+        }
+    }
+mixin LastCardss (oneCardThird)
+    figure.card-trird 
+        figcaption.fig
+            .fullCars
+                .flex.align 
+                    .last-image-pack
+                        img.orange-file(src=oneCardThird.img, alt=oneCardThird.alt)
+                    .text-display-img
+                        h4.topTitleThird #{oneCardThird.topTitleThird}
+                p.size #{oneCardThird.size}
+                p.mainThirdText #{oneCardThird.mainThirdText}
+                a(href="#").download #{oneCardThird.download}
