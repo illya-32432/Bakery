@@ -14,14 +14,14 @@ html(lang="en")
         header.container-fluid 
             .bg-header-menu.w-100
                 .header-menu
-                    .container 
+                    .container.d-lg-flex.justify-content-between.align-items-center
                         .logo 
                             a(href="#") 
                                 p.logo Gustoso
-                        .burger 
+                        .burger.d-lg-none
                             span
-                        nav.nav.menu 
-                            ul
+                        nav.nav.menu.d-lg-flex
+                            ul.d-lg-flex.justify-content-between.col-gap-20 
                                 li
                                     a(href="#") Welcome
                                 li
@@ -32,7 +32,7 @@ html(lang="en")
                                     a(href="#") News
                                 li
                                     a(href="#") Contact
-                        .social
+                        .social.d-lg-flex
                             ul.d-flex.justify-content-center.col-gap-20  
                                 li
                                     a(href="#") 

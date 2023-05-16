@@ -86,6 +86,8 @@ header
         display: flex
         flex-direction: column
         row-gap: 15rem
+        @media screen and (min-width: 992px)
+            flex-direction: row
 .social
     display: none
 .active-burger
@@ -111,6 +113,8 @@ h1
 .header-main-suptitle
     font-size: 24rem
     letter-spacing: 2rem
+    max-width: 545rem
+    margin: auto
     line-height: 36rem
     color: #ffffff
     padding: 135rem 0 90rem 0
